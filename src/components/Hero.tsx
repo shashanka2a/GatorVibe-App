@@ -20,7 +20,7 @@ export function Hero() {
               <FadeIn delay={400}>
                 <h1 className="text-4xl lg:text-6xl font-bold text-gray-900 leading-tight">
                   Catch the{" "}
-                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-purple-800 animate-shimmer">
+                  <span className="animate-shimmer">
                     Gator Vibe
                   </span>
                 </h1>

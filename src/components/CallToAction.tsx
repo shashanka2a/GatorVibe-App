@@ -16,7 +16,7 @@ export function CallToAction() {
               <div className="space-y-6">
                 <h2 className="text-3xl lg:text-5xl font-bold leading-tight">
                   Ready to catch the{" "}
-                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-200 to-white animate-shimmer">
+                  <span className="text-white font-bold">
                     Gator Vibe?
                   </span>
                 </h2>
