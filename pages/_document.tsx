@@ -14,7 +14,12 @@ export default function Document() {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="GatorVibe - Catch the Gator Vibe" />
         <meta name="twitter:description" content="Live, Connect, Belong. Join the ultimate student community platform." />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+        <link rel="icon" href="/favicon-16.svg" type="image/svg+xml" sizes="16x16" />
+        <link rel="icon" href="/favicon.ico" sizes="32x32" />
+        <link rel="apple-touch-icon" href="/favicon-192.svg" sizes="192x192" />
+        <link rel="manifest" href="/manifest.json" />
+        <meta name="theme-color" content="#8B5CF6" />
       </Head>
       <body>
         <Main />

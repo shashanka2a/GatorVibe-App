@@ -1,0 +1,18 @@
+<svg width="192" height="192" viewBox="0 0 192 192" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="gatorGradLarge" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8B5CF6" />
+      <stop offset="50%" stop-color="#A855F7" />
+      <stop offset="100%" stop-color="#C084FC" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background circle with subtle shadow -->
+  <circle cx="96" cy="96" r="88" fill="url(#gatorGradLarge)" />
+  <circle cx="96" cy="96" r="88" fill="none" stroke="rgba(139, 92, 246, 0.2)" stroke-width="8" />
+  
+  <!-- Letter G with better proportions for larger size -->
+  <path d="M66 42 C45 42 30 57 30 78 L30 114 C30 135 45 150 66 150 L114 150 C129 150 138 141 138 126 L138 96 L96 96 L96 114 L120 114 L120 126 C120 129 117 132 114 132 L66 132 C63 132 60 129 60 126 L60 66 C60 63 63 60 66 60 L114 60 C117 60 120 63 120 66 L138 66 C138 57 129 42 114 42 L66 42 Z" 
+        fill="white" 
+        stroke="none" />
+</svg>
