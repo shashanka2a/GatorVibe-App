@@ -7,17 +7,17 @@ A modern, responsive landing page built with Next.js 14, React 18, and Tailwind 
 
 ### The Problem
 College students struggle with three major challenges:
-- **Social Isolation**: Difficulty finding like-minded peers and building meaningful connections
-- **Housing Stress**: Finding compatible roommates through unreliable methods and limited information
+- **Housing Search Chaos**: Difficulty finding verified, affordable student housing near campus with limited reliable information
+- **Roommate Matching Stress**: Finding compatible roommates through unreliable methods and limited compatibility data
 - **FOMO**: Missing out on campus events, activities, and opportunities due to poor communication channels
 
 ### Our Solution
 GatorVibe is the ultimate student community platform that addresses these pain points through:
 
-**🤝 Community Discovery**
-- AI-powered matching based on interests, hobbies, and academic goals
-- Build meaningful friendships that extend beyond college
-- Connect with students who share your passions
+**🏠 Student Housing Hub**
+- Verified apartments, dorms, and shared housing options near campus
+- Browse photos, compare prices, and read authentic reviews
+- Filter by budget, amenities, and distance to campus
 
 **🏠 Smart Roommate Matching** 
 - Advanced compatibility algorithm considering lifestyle preferences

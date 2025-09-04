@@ -35,8 +35,8 @@ export function Hero() {
               <FadeIn delay={800}>
                 <p className="text-lg text-gray-600 max-w-xl leading-relaxed">
                   Join the ultimate student community platform where you can:
-                  <br />• <span className="font-semibold text-purple-700">Discover like-minded peers</span>
-                  <br />• <span className="font-semibold text-purple-700">Find perfect roommates</span> 
+                  <br />• <span className="font-semibold text-purple-700">Find verified student housing</span>
+                  <br />• <span className="font-semibold text-purple-700">Match with perfect roommates</span> 
                   <br />• <span className="font-semibold text-purple-700">Never miss campus events</span>
                 </p>
               </FadeIn>

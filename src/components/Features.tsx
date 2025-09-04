@@ -7,14 +7,14 @@ import { FadeIn, Stagger } from "./ui/animated-elements";
 export function Features() {
   const features = [
     {
-      icon: Users,
-      title: "Community Discovery",
-      description: "Connect with students who share your interests, hobbies, and academic goals. Build meaningful friendships that last beyond college.",
-      illustration: "community" as const,
+      icon: Home,
+      title: "Student Housing Hub",
+      description: "Discover verified student apartments, dorms, and shared housing options near campus. Browse photos, compare prices, and find your perfect home away from home.",
+      illustration: "housing" as const,
       color: "from-purple-500 to-purple-600"
     },
     {
-      icon: Home,
+      icon: Users,
       title: "Smart Roommate Matching",
       description: "Find your perfect roommate match based on lifestyle preferences, study habits, and personality compatibility. No more housing stress!",
       illustration: "roommate" as const,

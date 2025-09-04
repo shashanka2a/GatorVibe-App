@@ -1,90 +1,141 @@
 interface IllustrationProps {
-  type: 'community' | 'roommate' | 'events' | 'hero' | 'celebration';
+  type: 'housing' | 'roommate' | 'events' | 'hero' | 'celebration';
   className?: string;
 }
 
 export function Illustration({ type, className = "" }: IllustrationProps) {
   const illustrations = {
-    community: (
+    housing: (
       <svg viewBox="0 0 400 300" className={className}>
         <defs>
-          <linearGradient id="communityBg" x1="0%" y1="0%" x2="100%" y2="100%">
+          <linearGradient id="housingBg" x1="0%" y1="0%" x2="100%" y2="100%">
             <stop offset="0%" stopColor="#F3E8FF" />
             <stop offset="100%" stopColor="#EDE9FE" />
           </linearGradient>
-          <linearGradient id="purpleGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <linearGradient id="buildingGrad" x1="0%" y1="0%" x2="100%" y2="100%">
             <stop offset="0%" stopColor="#8B5CF6" />
             <stop offset="100%" stopColor="#A855F7" />
           </linearGradient>
         </defs>
         
         {/* Background */}
-        <rect width="400" height="300" fill="url(#communityBg)" rx="16"/>
+        <rect width="400" height="300" fill="url(#housingBg)" rx="16"/>
         
-        {/* Campus lawn setting */}
-        <ellipse cx="200" cy="280" rx="180" ry="30" fill="#86EFAC" opacity="0.6"/>
-        <ellipse cx="200" cy="275" rx="160" ry="25" fill="#4ADE80" opacity="0.4"/>
+        {/* Ground */}
+        <rect x="0" y="250" width="400" height="50" fill="#86EFAC" opacity="0.3"/>
         
-        {/* Students sitting in circle */}
-        {/* Student 1 - Asian female */}
-        <g transform="translate(120, 140)">
-          <circle cx="0" cy="0" r="18" fill="#FED7AA" stroke="#8B5CF6" strokeWidth="2"/>
-          <path d="M-12 -8 Q0 -15 12 -8" fill="#1F2937" />
-          <circle cx="-4" cy="-2" r="1.5" fill="#1F2937"/>
-          <circle cx="4" cy="-2" r="1.5" fill="#1F2937"/>
-          <path d="M-3 4 Q0 7 3 4" stroke="#8B5CF6" strokeWidth="1.5" fill="none"/>
-          <rect x="-15" y="18" width="30" height="25" fill="url(#purpleGrad)" rx="4"/>
+        {/* Main apartment building */}
+        <rect x="120" y="80" width="160" height="170" fill="url(#buildingGrad)" opacity="0.2" rx="8"/>
+        <rect x="125" y="85" width="150" height="160" fill="#FFFFFF" stroke="#8B5CF6" strokeWidth="2" rx="6"/>
+        
+        {/* Building windows - showing different apartments */}
+        {/* Floor 1 */}
+        <rect x="140" y="100" width="35" height="30" fill="#FEF3C7" stroke="#8B5CF6" strokeWidth="1" rx="3"/>
+        <rect x="185" y="100" width="35" height="30" fill="#DBEAFE" stroke="#8B5CF6" strokeWidth="1" rx="3"/>
+        <rect x="230" y="100" width="35" height="30" fill="#F3E8FF" stroke="#8B5CF6" strokeWidth="1" rx="3"/>
+        
+        {/* Floor 2 */}
+        <rect x="140" y="140" width="35" height="30" fill="#ECFDF5" stroke="#8B5CF6" strokeWidth="1" rx="3"/>
+        <rect x="185" y="140" width="35" height="30" fill="#FDF2F8" stroke="#8B5CF6" strokeWidth="1" rx="3"/>
+        <rect x="230" y="140" width="35" height="30" fill="#FEF3C7" stroke="#8B5CF6" strokeWidth="1" rx="3"/>
+        
+        {/* Floor 3 */}
+        <rect x="140" y="180" width="35" height="30" fill="#DBEAFE" stroke="#8B5CF6" strokeWidth="1" rx="3"/>
+        <rect x="185" y="180" width="35" height="30" fill="#F3E8FF" stroke="#8B5CF6" strokeWidth="1" rx="3"/>
+        <rect x="230" y="180" width="35" height="30" fill="#ECFDF5" stroke="#8B5CF6" strokeWidth="1" rx="3"/>
+        
+        {/* Floor 4 */}
+        <rect x="140" y="220" width="35" height="20" fill="#FDF2F8" stroke="#8B5CF6" strokeWidth="1" rx="3"/>
+        <rect x="185" y="220" width="35" height="20" fill="#FEF3C7" stroke="#8B5CF6" strokeWidth="1" rx="3"/>
+        <rect x="230" y="220" width="35" height="20" fill="#DBEAFE" stroke="#8B5CF6" strokeWidth="1" rx="3"/>
+        
+        {/* Building entrance */}
+        <rect x="190" y="220" width="20" height="30" fill="url(#buildingGrad)" opacity="0.6" rx="10 10 0 0"/>
+        <circle cx="200" cy="235" r="2" fill="#FFFFFF"/>
+        
+        {/* Side buildings */}
+        <rect x="50" y="120" width="60" height="130" fill="url(#buildingGrad)" opacity="0.15" rx="6"/>
+        <rect x="55" y="125" width="50" height="120" fill="#FFFFFF" stroke="#8B5CF6" strokeWidth="1" rx="4"/>
+        
+        <rect x="290" y="110" width="60" height="140" fill="url(#buildingGrad)" opacity="0.15" rx="6"/>
+        <rect x="295" y="115" width="50" height="130" fill="#FFFFFF" stroke="#8B5CF6" strokeWidth="1" rx="4"/>
+        
+        {/* Side building windows */}
+        <rect x="65" y="140" width="12" height="15" fill="#FEF3C7" stroke="#8B5CF6" strokeWidth="0.5" rx="2"/>
+        <rect x="80" y="140" width="12" height="15" fill="#DBEAFE" stroke="#8B5CF6" strokeWidth="0.5" rx="2"/>
+        <rect x="65" y="165" width="12" height="15" fill="#F3E8FF" stroke="#8B5CF6" strokeWidth="0.5" rx="2"/>
+        <rect x="80" y="165" width="12" height="15" fill="#ECFDF5" stroke="#8B5CF6" strokeWidth="0.5" rx="2"/>
+        
+        <rect x="305" y="135" width="12" height="15" fill="#FDF2F8" stroke="#8B5CF6" strokeWidth="0.5" rx="2"/>
+        <rect x="320" y="135" width="12" height="15" fill="#FEF3C7" stroke="#8B5CF6" strokeWidth="0.5" rx="2"/>
+        <rect x="305" y="160" width="12" height="15" fill="#DBEAFE" stroke="#8B5CF6" strokeWidth="0.5" rx="2"/>
+        <rect x="320" y="160" width="12" height="15" fill="#F3E8FF" stroke="#8B5CF6" strokeWidth="0.5" rx="2"/>
+        
+        {/* Housing search interface overlay */}
+        <g transform="translate(60, 40)">
+          <rect x="0" y="0" width="100" height="60" fill="#FFFFFF" stroke="#8B5CF6" strokeWidth="2" rx="8"/>
+          <rect x="8" y="8" width="84" height="20" fill="#F3F4F6" rx="4"/>
+          <text x="50" y="20" textAnchor="middle" fill="#6B7280" fontSize="10">Search Housing</text>
+          
+          {/* Filter options */}
+          <rect x="8" y="32" width="25" height="12" fill="url(#buildingGrad)" opacity="0.3" rx="6"/>
+          <text x="20" y="40" textAnchor="middle" fill="#8B5CF6" fontSize="7">Dorm</text>
+          
+          <rect x="37" y="32" width="25" height="12" fill="url(#buildingGrad)" opacity="0.3" rx="6"/>
+          <text x="49" y="40" textAnchor="middle" fill="#8B5CF6" fontSize="7">Apt</text>
+          
+          <rect x="66" y="32" width="25" height="12" fill="url(#buildingGrad)" opacity="0.3" rx="6"/>
+          <text x="78" y="40" textAnchor="middle" fill="#8B5CF6" fontSize="7">Share</text>
+          
+          <text x="50" y="54" textAnchor="middle" fill="#059669" fontSize="8" fontWeight="600">127 Available</text>
         </g>
         
-        {/* Student 2 - Black male */}
-        <g transform="translate(280, 140)">
-          <circle cx="0" cy="0" r="18" fill="#D2B48C" stroke="#8B5CF6" strokeWidth="2"/>
-          <path d="M-12 -8 Q0 -12 12 -8" fill="#2D1B69" />
-          <circle cx="-4" cy="-2" r="1.5" fill="#1F2937"/>
-          <circle cx="4" cy="-2" r="1.5" fill="#1F2937"/>
-          <path d="M-3 4 Q0 7 3 4" stroke="#8B5CF6" strokeWidth="1.5" fill="none"/>
-          <rect x="-15" y="18" width="30" height="25" fill="#F472B6" rx="4"/>
+        {/* Price tags floating */}
+        <g transform="translate(320, 60)">
+          <rect x="0" y="0" width="50" height="25" fill="#FFFFFF" stroke="#10B981" strokeWidth="2" rx="6"/>
+          <text x="25" y="12" textAnchor="middle" fill="#10B981" fontSize="9" fontWeight="600">$850</text>
+          <text x="25" y="20" textAnchor="middle" fill="#6B7280" fontSize="7">/month</text>
         </g>
         
-        {/* Student 3 - Latina female */}
-        <g transform="translate(200, 200)">
-          <circle cx="0" cy="0" r="18" fill="#F4A460" stroke="#8B5CF6" strokeWidth="2"/>
-          <path d="M-12 -8 Q0 -15 12 -8" fill="#8B4513" />
-          <circle cx="-4" cy="-2" r="1.5" fill="#1F2937"/>
-          <circle cx="4" cy="-2" r="1.5" fill="#1F2937"/>
-          <path d="M-3 4 Q0 7 3 4" stroke="#8B5CF6" strokeWidth="1.5" fill="none"/>
-          <rect x="-15" y="18" width="30" height="25" fill="#60A5FA" rx="4"/>
+        <g transform="translate(30, 90)">
+          <rect x="0" y="0" width="50" height="25" fill="#FFFFFF" stroke="#F59E0B" strokeWidth="2" rx="6"/>
+          <text x="25" y="12" textAnchor="middle" fill="#F59E0B" fontSize="9" fontWeight="600">$650</text>
+          <text x="25" y="20" textAnchor="middle" fill="#6B7280" fontSize="7">/month</text>
         </g>
         
-        {/* Student 4 - White male */}
-        <g transform="translate(160, 100)">
-          <circle cx="0" cy="0" r="18" fill="#FDBCB4" stroke="#8B5CF6" strokeWidth="2"/>
-          <path d="M-12 -8 Q0 -12 12 -8" fill="#D2691E" />
-          <circle cx="-4" cy="-2" r="1.5" fill="#1F2937"/>
-          <circle cx="4" cy="-2" r="1.5" fill="#1F2937"/>
-          <path d="M-3 4 Q0 7 3 4" stroke="#8B5CF6" strokeWidth="1.5" fill="none"/>
-          <rect x="-15" y="18" width="30" height="25" fill="#34D399" rx="4"/>
+        {/* Students looking at housing */}
+        <g transform="translate(80, 200)">
+          <circle cx="0" cy="0" r="12" fill="#F4A460" stroke="#8B5CF6" strokeWidth="1"/>
+          <path d="M-8 -5 Q0 -10 8 -5" fill="#8B4513" />
+          <rect x="-8" y="12" width="16" height="15" fill="#F472B6" rx="2"/>
+          {/* Pointing gesture */}
+          <rect x="8" y="2" width="6" height="10" fill="#F4A460" rx="3" transform="rotate(30)"/>
         </g>
         
-        {/* Student 5 - Mixed race female */}
-        <g transform="translate(240, 100)">
-          <circle cx="0" cy="0" r="18" fill="#DEB887" stroke="#8B5CF6" strokeWidth="2"/>
-          <path d="M-12 -8 Q0 -15 12 -8" fill="#654321" />
-          <circle cx="-4" cy="-2" r="1.5" fill="#1F2937"/>
-          <circle cx="4" cy="-2" r="1.5" fill="#1F2937"/>
-          <path d="M-3 4 Q0 7 3 4" stroke="#8B5CF6" strokeWidth="1.5" fill="none"/>
-          <rect x="-15" y="18" width="30" height="25" fill="#FBBF24" rx="4"/>
+        <g transform="translate(100, 205)">
+          <circle cx="0" cy="0" r="12" fill="#FDBCB4" stroke="#8B5CF6" strokeWidth="1"/>
+          <path d="M-8 -5 Q0 -8 8 -5" fill="#D2691E" />
+          <rect x="-8" y="12" width="16" height="15" fill="#60A5FA" rx="2"/>
         </g>
         
-        {/* Connection lines */}
-        <path d="M140 155 Q180 140 220 155" stroke="#8B5CF6" strokeWidth="2" fill="none" opacity="0.6"/>
-        <path d="M180 215 Q220 200 260 215" stroke="#8B5CF6" strokeWidth="2" fill="none" opacity="0.6"/>
-        <path d="M175 115 Q200 105 225 115" stroke="#8B5CF6" strokeWidth="2" fill="none" opacity="0.6"/>
+        {/* Amenity icons */}
+        <g transform="translate(150, 50)">
+          <circle cx="0" cy="0" r="8" fill="#34D399" opacity="0.8"/>
+          <rect x="-3" y="-3" width="6" height="6" fill="#FFFFFF" rx="1"/>
+          <text x="0" y="15" textAnchor="middle" fill="#059669" fontSize="7">WiFi</text>
+        </g>
         
-        {/* Floating elements */}
-        <circle cx="80" cy="60" r="4" fill="#F472B6" opacity="0.7"/>
-        <circle cx="320" cy="70" r="3" fill="#60A5FA" opacity="0.7"/>
-        <circle cx="350" cy="200" r="5" fill="#34D399" opacity="0.7"/>
+        <g transform="translate(200, 45)">
+          <circle cx="0" cy="0" r="8" fill="#F59E0B" opacity="0.8"/>
+          <circle cx="0" cy="0" r="3" fill="#FFFFFF"/>
+          <text x="0" y="15" textAnchor="middle" fill="#D97706" fontSize="7">Gym</text>
+        </g>
+        
+        <g transform="translate(250, 50)">
+          <circle cx="0" cy="0" r="8" fill="#3B82F6" opacity="0.8"/>
+          <rect x="-2" y="-4" width="4" height="8" fill="#FFFFFF" rx="2"/>
+          <text x="0" y="15" textAnchor="middle" fill="#2563EB" fontSize="7">Pool</text>
+        </g>
       </svg>
     ),
     
