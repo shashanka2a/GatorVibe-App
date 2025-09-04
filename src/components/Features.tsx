@@ -38,7 +38,7 @@ export function Features() {
               Everything you need to <span className="text-purple-600 animate-shimmer">thrive</span>
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              GatorVibe brings together all the <span className="font-semibold text-purple-700">tools and connections</span> you need to make the most of your college experience.
+              All the <span className="font-semibold text-purple-700">tools and connections</span> you need to make the most of your college experience.
             </p>
           </div>
         </FadeIn>
