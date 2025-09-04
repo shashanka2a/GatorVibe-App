@@ -18,9 +18,9 @@ export function CallToAction() {
                   Gator Vibe?
                 </span>
               </h2>
-              <p className="text-xl text-purple-100">
-                Join our waitlist and be among the first to experience the future of student community. 
-                Early access starts this fall!
+              <p className="text-xl text-purple-100 leading-relaxed">
+                Join our waitlist and be among the **first to experience** the future of student community.
+                <br />**Early access starts this fall!**
               </p>
             </div>
             
@@ -31,13 +31,13 @@ export function CallToAction() {
                   placeholder="Enter your university email"
                   className="bg-white/10 border-white/20 text-white placeholder:text-purple-200 focus:bg-white/20 rounded-xl"
                 />
-                <Button className="bg-white text-purple-700 hover:bg-purple-50 px-6 rounded-xl whitespace-nowrap">
-                  Join Waitlist
+                <Button className="bg-white text-purple-700 hover:bg-purple-50 px-8 py-3 rounded-xl whitespace-nowrap font-semibold shadow-lg hover:shadow-xl transition-all">
+                  **Join Waitlist**
                   <ArrowRight className="ml-2 w-4 h-4" />
                 </Button>
               </div>
               <p className="text-sm text-purple-200">
-                🎓 Free for all students • 🔒 No spam, promise!
+                🎓 **Free for all students** • 🔒 **No spam, promise!**
               </p>
             </div>
             
@@ -51,7 +51,7 @@ export function CallToAction() {
                 <div className="text-sm text-purple-200">Universities</div>
               </div>
               <div className="text-center">
-                <div className="text-2xl font-bold text-white">2024</div>
+                <div className="text-2xl font-bold text-white">2025</div>
                 <div className="text-sm text-purple-200">Launch year</div>
               </div>
             </div>

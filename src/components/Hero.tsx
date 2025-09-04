@@ -23,17 +23,19 @@ export function Hero() {
               <h2 className="text-2xl lg:text-3xl text-gray-600 font-medium">
                 Live, Connect, Belong.
               </h2>
-              <p className="text-lg text-gray-600 max-w-xl">
-                Join the ultimate student community platform where you can discover like-minded peers, 
-                find the perfect roommates, and never miss out on campus events again.
+              <p className="text-lg text-gray-600 max-w-xl leading-relaxed">
+                Join the ultimate student community platform where you can:
+                <br />• **Discover like-minded peers**
+                <br />• **Find perfect roommates** 
+                <br />• **Never miss campus events**
               </p>
             </div>
             
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button size="lg" className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-4 text-lg rounded-xl">
-                Join the Waitlist
+              <Button size="lg" className="bg-purple-600 hover:bg-purple-700 text-white px-10 py-5 text-lg rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all">
+                **Join the Waitlist** →
               </Button>
-              <Button variant="outline" size="lg" className="border-purple-200 text-purple-600 hover:bg-purple-50 px-8 py-4 text-lg rounded-xl">
+              <Button variant="outline" size="lg" className="border-2 border-purple-200 text-purple-600 hover:bg-purple-50 hover:border-purple-300 px-8 py-5 text-lg rounded-xl transition-all">
                 Watch Demo
               </Button>
             </div>
