@@ -16,7 +16,7 @@ export default function App() {
         <CallToAction />
       </main>
       <Footer />
-      <Analytics />
+      <Analytics mode="production" />
       <SpeedInsights />
     </div>
   );
