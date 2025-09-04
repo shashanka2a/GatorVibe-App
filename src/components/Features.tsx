@@ -16,7 +16,7 @@ export function Features() {
     {
       icon: Users,
       title: "Smart Roommate Matching",
-      description: "Find your perfect roommate match based on lifestyle preferences, study habits, and personality compatibility. No more housing stress!",
+      description: "Find your perfect roommate match based on lifestyle preferences, study habits, and personality compatibility. Connect with compatible students effortlessly.",
       illustration: "roommate" as const,
       color: "from-purple-400 to-purple-500"
     },
