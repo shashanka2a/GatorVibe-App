@@ -2,6 +2,7 @@ import { Users, Home, Calendar, Heart, User } from "lucide-react";
 import { Card, CardContent } from "./ui/card";
 import { AnimatedCard } from "./ui/animated-card";
 import { Illustration } from "./ui/illustration";
+import { FadeIn, Stagger } from "./ui/animated-elements";
 
 export function Features() {
   const features = [
@@ -31,79 +32,83 @@ export function Features() {
   return (
     <section id="features" className="py-20 lg:py-32 bg-white">
       <div className="max-w-7xl mx-auto px-4 lg:px-6">
-        <div className="text-center space-y-4 mb-16">
-          <h2 className="text-3xl lg:text-5xl font-bold text-gray-900">
-            Everything you need to <span className="text-purple-600">thrive</span>
-          </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            GatorVibe brings together all the <span className="font-semibold text-purple-700">tools and connections</span> you need to make the most of your college experience.
-          </p>
-        </div>
+        <FadeIn delay={200}>
+          <div className="text-center space-y-4 mb-16">
+            <h2 className="text-3xl lg:text-5xl font-bold text-gray-900">
+              Everything you need to <span className="text-purple-600 animate-shimmer">thrive</span>
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              GatorVibe brings together all the <span className="font-semibold text-purple-700">tools and connections</span> you need to make the most of your college experience.
+            </p>
+          </div>
+        </FadeIn>
         
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          {features.map((feature, index) => {
-            // Special animation for roommate matching (index 1)
-            if (index === 1) {
-              const matchingAnimation = (
-                <div className="p-6 text-center space-y-4">
-                  <div className="flex justify-center items-center space-x-4">
-                    <div className="flex flex-col items-center space-y-2">
-                      <div className="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center">
-                        <User className="w-6 h-6 text-white" />
+          <Stagger delay={400} staggerDelay={200}>
+            {features.map((feature, index) => {
+              // Special animation for roommate matching (index 1)
+              if (index === 1) {
+                const matchingAnimation = (
+                  <div className="p-6 text-center space-y-4">
+                    <div className="flex justify-center items-center space-x-4">
+                      <div className="flex flex-col items-center space-y-2 animate-bounce-gentle">
+                        <div className="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center">
+                          <User className="w-6 h-6 text-white" />
+                        </div>
+                        <span className="text-sm font-medium">You</span>
                       </div>
-                      <span className="text-sm font-medium">You</span>
-                    </div>
-                    <div className="animate-pulse">
-                      <Heart className="w-6 h-6 text-red-500 fill-current" />
-                    </div>
-                    <div className="flex flex-col items-center space-y-2">
-                      <div className="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center">
-                        <User className="w-6 h-6 text-white" />
+                      <div className="animate-pulse-subtle">
+                        <Heart className="w-6 h-6 text-red-500 fill-current" />
                       </div>
-                      <span className="text-sm font-medium">Perfect Match</span>
+                      <div className="flex flex-col items-center space-y-2 animate-bounce-gentle" style={{ animationDelay: '0.5s' } as any}>
+                        <div className="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center">
+                          <User className="w-6 h-6 text-white" />
+                        </div>
+                        <span className="text-sm font-medium">Perfect Match</span>
+                      </div>
                     </div>
+                    <p className="text-sm text-gray-600"><span className="font-semibold text-purple-700">AI-powered compatibility matching</span></p>
                   </div>
-                  <p className="text-sm text-gray-600"><span className="font-semibold text-purple-700">AI-powered compatibility matching</span></p>
-                </div>
-              );
+                );
+                
+                return (
+                  <AnimatedCard key={index} hoverContent={matchingAnimation} className="hover-lift hover-glow">
+                    <div className="relative h-48 overflow-hidden">
+                      <Illustration 
+                        type={feature.illustration}
+                        className="w-full h-full transition-transform duration-500 group-hover:scale-105"
+                      />
+                    </div>
+                    <CardContent className="p-6 space-y-4">
+                      <div className={`w-12 h-12 bg-gradient-to-br ${feature.color} rounded-xl flex items-center justify-center mb-4 animate-pulse-subtle`}>
+                        <feature.icon className="w-6 h-6 text-white" />
+                      </div>
+                      <h3 className="text-xl font-bold text-gray-900">{feature.title}</h3>
+                      <p className="text-gray-600 leading-relaxed">{feature.description}</p>
+                    </CardContent>
+                  </AnimatedCard>
+                );
+              }
               
               return (
-                <AnimatedCard key={index} hoverContent={matchingAnimation}>
+                <Card key={index} className="group hover:shadow-xl transition-all duration-500 border-0 shadow-lg overflow-hidden hover-lift hover-glow">
                   <div className="relative h-48 overflow-hidden">
                     <Illustration 
                       type={feature.illustration}
-                      className="w-full h-full"
+                      className="w-full h-full transition-transform duration-500 group-hover:scale-105"
                     />
                   </div>
                   <CardContent className="p-6 space-y-4">
-                    <div className={`w-12 h-12 bg-gradient-to-br ${feature.color} rounded-xl flex items-center justify-center mb-4`}>
+                    <div className={`w-12 h-12 bg-gradient-to-br ${feature.color} rounded-xl flex items-center justify-center mb-4 group-hover:animate-bounce-gentle transition-all duration-300`}>
                       <feature.icon className="w-6 h-6 text-white" />
                     </div>
-                    <h3 className="text-xl font-bold text-gray-900">{feature.title}</h3>
+                    <h3 className="text-xl font-bold text-gray-900 group-hover:text-purple-700 transition-colors duration-300">{feature.title}</h3>
                     <p className="text-gray-600 leading-relaxed">{feature.description}</p>
                   </CardContent>
-                </AnimatedCard>
+                </Card>
               );
-            }
-            
-            return (
-              <Card key={index} className="group hover:shadow-xl transition-all duration-300 border-0 shadow-lg overflow-hidden">
-                <div className="relative h-48 overflow-hidden">
-                  <Illustration 
-                    type={feature.illustration}
-                    className="w-full h-full"
-                  />
-                </div>
-                <CardContent className="p-6 space-y-4">
-                  <div className={`w-12 h-12 bg-gradient-to-br ${feature.color} rounded-xl flex items-center justify-center mb-4`}>
-                    <feature.icon className="w-6 h-6 text-white" />
-                  </div>
-                  <h3 className="text-xl font-bold text-gray-900">{feature.title}</h3>
-                  <p className="text-gray-600 leading-relaxed">{feature.description}</p>
-                </CardContent>
-              </Card>
-            );
-          })}
+            })}
+          </Stagger>
         </div>
       </div>
     </section>
