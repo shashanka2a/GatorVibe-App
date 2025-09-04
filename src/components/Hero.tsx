@@ -1,5 +1,5 @@
 import { Button } from "./ui/button";
-import { ImageWithFallback } from "./figma/ImageWithFallback";
+import { Illustration } from "./ui/illustration";
 
 export function Hero() {
   return (
@@ -25,15 +25,15 @@ export function Hero() {
               </h2>
               <p className="text-lg text-gray-600 max-w-xl leading-relaxed">
                 Join the ultimate student community platform where you can:
-                <br />• **Discover like-minded peers**
-                <br />• **Find perfect roommates** 
-                <br />• **Never miss campus events**
+                <br />• <span className="font-semibold text-purple-700">Discover like-minded peers</span>
+                <br />• <span className="font-semibold text-purple-700">Find perfect roommates</span> 
+                <br />• <span className="font-semibold text-purple-700">Never miss campus events</span>
               </p>
             </div>
             
             <div className="flex flex-col sm:flex-row gap-4">
               <Button size="lg" className="bg-purple-600 hover:bg-purple-700 text-white px-10 py-5 text-lg rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all">
-                **Join the Waitlist** →
+                Join the Waitlist →
               </Button>
               <Button variant="outline" size="lg" className="border-2 border-purple-200 text-purple-600 hover:bg-purple-50 hover:border-purple-300 px-8 py-5 text-lg rounded-xl transition-all">
                 Watch Demo
@@ -54,10 +54,9 @@ export function Hero() {
           
           <div className="relative">
             <div className="relative z-10">
-              <ImageWithFallback
-                src="https://images.unsplash.com/photo-1744320911030-1ab998d994d7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkaXZlcnNlJTIwY29sbGVnZSUyMHN0dWRlbnRzJTIwY29tbXVuaXR5fGVufDF8fHx8MTc1Njk4MjEyNnww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-                alt="Diverse group of college students"
-                className="rounded-2xl shadow-2xl w-full h-[400px] object-cover"
+              <Illustration 
+                type="hero"
+                className="rounded-2xl shadow-2xl w-full h-[400px]"
               />
             </div>
             <div className="absolute -top-4 -right-4 w-20 h-20 bg-gradient-to-br from-purple-400 to-purple-600 rounded-full opacity-80"></div>

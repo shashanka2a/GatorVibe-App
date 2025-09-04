@@ -1,6 +1,6 @@
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
-import { ImageWithFallback } from "./figma/ImageWithFallback";
+import { Illustration } from "./ui/illustration";
 import { ArrowRight } from "lucide-react";
 
 export function CallToAction() {
@@ -19,8 +19,8 @@ export function CallToAction() {
                 </span>
               </h2>
               <p className="text-xl text-purple-100 leading-relaxed">
-                Join our waitlist and be among the **first to experience** the future of student community.
-                <br />**Early access starts this fall!**
+                Join our waitlist and be among the <span className="font-semibold text-white">first to experience</span> the future of student community.
+                <br /><span className="font-semibold text-white">Early access starts this fall!</span>
               </p>
             </div>
             
@@ -32,12 +32,12 @@ export function CallToAction() {
                   className="bg-white/10 border-white/20 text-white placeholder:text-purple-200 focus:bg-white/20 rounded-xl"
                 />
                 <Button className="bg-white text-purple-700 hover:bg-purple-50 px-8 py-3 rounded-xl whitespace-nowrap font-semibold shadow-lg hover:shadow-xl transition-all">
-                  **Join Waitlist**
+                  Join Waitlist
                   <ArrowRight className="ml-2 w-4 h-4" />
                 </Button>
               </div>
               <p className="text-sm text-purple-200">
-                🎓 **Free for all students** • 🔒 **No spam, promise!**
+                🎓 <span className="font-semibold">Free for all students</span> • 🔒 <span className="font-semibold">No spam, promise!</span>
               </p>
             </div>
             
@@ -59,10 +59,9 @@ export function CallToAction() {
           
           <div className="relative">
             <div className="relative z-10">
-              <ImageWithFallback
-                src="https://images.unsplash.com/photo-1688777959626-75a6d8f496a0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxoYXBweSUyMHN0dWRlbnQlMjBncm91cCUyMGZyaWVuZHN8ZW58MXx8fHwxNzU2OTgyMTI3fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-                alt="Happy students celebrating"
-                className="rounded-2xl shadow-2xl w-full h-[400px] object-cover opacity-90"
+              <Illustration 
+                type="celebration"
+                className="rounded-2xl shadow-2xl w-full h-[400px] opacity-90"
               />
             </div>
             <div className="absolute -top-4 -right-4 w-20 h-20 bg-gradient-to-br from-white/20 to-white/30 rounded-full"></div>
