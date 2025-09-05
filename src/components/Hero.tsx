@@ -21,22 +21,22 @@ export function Hero() {
                 <h1 className="text-4xl lg:text-6xl font-bold text-gray-900 leading-tight">
                   Catch the{" "}
                   <span className="animate-shimmer">
-                    Gator Vibe
+                    VYBR Vibe
                   </span>
                 </h1>
               </FadeIn>
               
               <FadeIn delay={600}>
                 <h2 className="text-2xl lg:text-3xl text-gray-600 font-medium">
-                  Live, Connect, Belong.
+                  With Your Best Roommate, Residence, and Routine.
                 </h2>
               </FadeIn>
               
               <FadeIn delay={800}>
                 <p className="text-lg text-gray-600 max-w-xl leading-relaxed">
-                  Join the ultimate student community platform where you can:
-                  <br />• <span className="font-semibold text-purple-700">Find verified student housing</span>
-                  <br />• <span className="font-semibold text-purple-700">Match with perfect roommates</span> 
+                  👉 Join the ultimate student community platform where you can:
+                  <br />• <span className="font-semibold text-purple-700">Find verified housing near campus</span>
+                  <br />• <span className="font-semibold text-purple-700">Match with compatible roommates</span> 
                   <br />• <span className="font-semibold text-purple-700">Never miss campus events</span>
                 </p>
               </FadeIn>

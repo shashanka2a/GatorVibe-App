@@ -8,9 +8,9 @@ export function Header() {
         <div className="flex items-center justify-between w-full max-w-7xl mx-auto">
           <div className="flex items-center space-x-2 hover-scale transition-transform duration-300">
             <div className="w-8 h-8 bg-gradient-to-br from-purple-500 to-purple-700 rounded-lg flex items-center justify-center animate-pulse-subtle">
-              <span className="text-white font-bold text-sm">G</span>
+              <span className="text-white font-bold text-sm">V</span>
             </div>
-            <span className="text-xl font-bold text-gray-900">GatorVibe</span>
+            <span className="text-xl font-bold text-gray-900">VYBR</span>
           </div>
           
           <nav className="hidden md:flex items-center space-x-8">
