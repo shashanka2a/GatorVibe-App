@@ -6,9 +6,9 @@ export function Footer() {
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
               <div className="w-8 h-8 bg-gradient-to-br from-purple-500 to-purple-700 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-sm">G</span>
+                <span className="text-white font-bold text-sm">V</span>
               </div>
-              <span className="text-xl font-bold">GatorVibe</span>
+              <span className="text-xl font-bold">VYBR</span>
             </div>
             <p className="text-gray-400 text-sm">
               The ultimate student community platform for finding your tribe, perfect roommates, and amazing events.
@@ -45,7 +45,7 @@ export function Footer() {
         
         <div className="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-400 text-sm">
-            © 2025 GatorVibe. All rights reserved.
+            © 2025 VYBR. All rights reserved.
           </p>
           <div className="flex space-x-6 mt-4 md:mt-0">
             <a href="#" className="text-gray-400 hover:text-white transition-colors">

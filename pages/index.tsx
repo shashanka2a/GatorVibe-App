@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>GatorVibe - Catch the Gator Vibe</title>
+        <title>VYBR - Catch the VYBR Vibe</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <div className="min-h-screen bg-white">

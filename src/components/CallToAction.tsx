@@ -17,7 +17,7 @@ export function CallToAction() {
                 <h2 className="text-3xl lg:text-5xl font-bold leading-tight">
                   Ready to catch the{" "}
                   <span className="text-white font-bold">
-                    Gator Vibe?
+                    VYBR Vibe?
                   </span>
                 </h2>
                 <p className="text-xl text-purple-100 leading-relaxed">
@@ -35,7 +35,7 @@ export function CallToAction() {
                     placeholder="Enter your university email"
                     className="bg-white/10 border-white/20 text-white placeholder:text-purple-200 focus:bg-white/20 rounded-xl hover-lift transition-all duration-300 focus:ring-2 focus:ring-white/30"
                   />
-                  <Button className="bg-white text-purple-700 hover:bg-purple-50 px-8 py-3 rounded-xl whitespace-nowrap font-semibold shadow-lg hover:shadow-xl hover-lift hover-glow transition-all duration-300">
+                  <Button className="bg-purple-600 text-white hover:bg-purple-700 px-8 py-3 rounded-xl whitespace-nowrap font-semibold shadow-lg hover:shadow-xl hover-lift hover-glow transition-all duration-300">
                     Join Waitlist
                     <ArrowRight className="ml-2 w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
                   </Button>

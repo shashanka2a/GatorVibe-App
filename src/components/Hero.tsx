@@ -19,17 +19,10 @@ export function Hero() {
             <div className="space-y-6">
               <FadeIn delay={400}>
                 <h1 className="text-4xl lg:text-6xl font-bold text-gray-900 leading-tight">
-                  Catch the{" "}
                   <span className="animate-shimmer">
-                    VYBR Vibe
-                  </span>
+                    VYBR
+                  </span>, Vibe with Your Best Roommate, Residence, and Routine
                 </h1>
-              </FadeIn>
-              
-              <FadeIn delay={600}>
-                <h2 className="text-2xl lg:text-3xl text-gray-600 font-medium">
-                  With Your Best Roommate, Residence, and Routine.
-                </h2>
               </FadeIn>
               
               <FadeIn delay={800}>
