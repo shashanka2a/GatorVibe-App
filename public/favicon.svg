@@ -1,6 +1,6 @@
 <svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="gatorGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+    <linearGradient id="vybrGrad" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#8B5CF6" />
       <stop offset="50%" stop-color="#A855F7" />
       <stop offset="100%" stop-color="#C084FC" />
@@ -8,11 +8,11 @@
   </defs>
   
   <!-- Background circle with subtle shadow -->
-  <circle cx="16" cy="16" r="15" fill="url(#gatorGrad)" />
+  <circle cx="16" cy="16" r="15" fill="url(#vybrGrad)" />
   <circle cx="16" cy="16" r="15" fill="none" stroke="rgba(139, 92, 246, 0.3)" stroke-width="2" />
   
-  <!-- Letter G with better proportions -->
-  <path d="M11 7 C7.5 7 5 9.5 5 13 L5 19 C5 22.5 7.5 25 11 25 L19 25 C21.5 25 23 23.5 23 21 L23 16 L16 16 L16 19 L20 19 L20 21 C20 21.5 19.5 22 19 22 L11 22 C10.5 22 10 21.5 10 21 L10 11 C10 10.5 10.5 10 11 10 L19 10 C19.5 10 20 10.5 20 11 L23 11 C23 9.5 21.5 7 19 7 L11 7 Z" 
+  <!-- Letter V with clean proportions -->
+  <path d="M8 8 L12 8 L16 20 L20 8 L24 8 L18 24 L14 24 L8 8 Z" 
         fill="white" 
         stroke="none" />
 </svg>
