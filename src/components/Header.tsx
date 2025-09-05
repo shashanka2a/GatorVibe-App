@@ -32,7 +32,7 @@ export function Header() {
             <Button variant="ghost" className="text-purple-600 hover:text-purple-700 hover-lift transition-all duration-300">
               Sign In
             </Button>
-            <Button className="bg-purple-600 hover:bg-purple-700 hover-lift hover-glow transition-all duration-300">
+            <Button className="bg-purple-600 hover:bg-purple-700 text-white hover-lift hover-glow transition-all duration-300">
               Join Waitlist
             </Button>
           </div>
