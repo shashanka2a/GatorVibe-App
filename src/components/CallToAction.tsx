@@ -46,28 +46,6 @@ export function CallToAction() {
               </div>
             </FadeIn>
             
-            <FadeIn delay={600}>
-              <div className="grid grid-cols-3 gap-6 pt-8">
-                <Pulse delay={0}>
-                  <div className="text-center hover-scale transition-transform duration-300">
-                    <div className="text-2xl font-bold text-white">500+</div>
-                    <div className="text-sm text-purple-200">Students waiting</div>
-                  </div>
-                </Pulse>
-                <Pulse delay={0.5}>
-                  <div className="text-center hover-scale transition-transform duration-300">
-                    <div className="text-2xl font-bold text-white">50+</div>
-                    <div className="text-sm text-purple-200">Universities</div>
-                  </div>
-                </Pulse>
-                <Pulse delay={1}>
-                  <div className="text-center hover-scale transition-transform duration-300">
-                    <div className="text-2xl font-bold text-white">2025</div>
-                    <div className="text-sm text-purple-200">Launch year</div>
-                  </div>
-                </Pulse>
-              </div>
-            </FadeIn>
           </div>
           
           <SlideIn direction="right" delay={400}>
