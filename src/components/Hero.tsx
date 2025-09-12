@@ -46,18 +46,6 @@ export function Hero() {
               </div>
             </FadeIn>
             
-            <FadeIn delay={1200}>
-              <div className="flex items-center space-x-6 pt-4">
-                <div className="flex items-center space-x-2">
-                  <div className="flex -space-x-2">
-                    <div className="w-8 h-8 bg-purple-400 rounded-full border-2 border-white animate-pulse-subtle"></div>
-                    <div className="w-8 h-8 bg-purple-500 rounded-full border-2 border-white animate-pulse-subtle" style={{ animationDelay: '0.5s' } as any}></div>
-                    <div className="w-8 h-8 bg-purple-600 rounded-full border-2 border-white animate-pulse-subtle" style={{ animationDelay: '1s' } as any}></div>
-                  </div>
-                  <span className="text-sm text-gray-600">500+ students waiting</span>
-                </div>
-              </div>
-            </FadeIn>
           </div>
           
           <SlideIn direction="right" delay={600}>
