@@ -46,10 +46,10 @@ export function Features() {
         <FadeIn delay={200}>
           <div className="text-center space-y-4 mb-16">
             <h2 className="text-4xl lg:text-5xl font-bold text-gray-900">
-              Discover Your Perfect <span className="text-teal-600">Living Space</span>
+              Everything you need to <span className="text-teal-600">thrive</span>
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Explore verified housing options, connect with compatible roommates, and find your ideal home near campus.
+              VYBR brings together all the tools and connections you need to make the most of your college experience.
             </p>
           </div>
         </FadeIn>
