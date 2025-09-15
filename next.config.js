@@ -6,6 +6,22 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
+  // Required for Replit environment - allow all hosts for proxy
+  async headers() {
+    return [
+      {
+        source: '/(.*)',
+        headers: [
+          {
+            key: 'X-Frame-Options',
+            value: 'ALLOWALL',
+          },
+        ],
+      },
+    ]
+  },
+  // Allow cross-origin requests in development for Replit
+  allowedDevOrigins: '*',
 }
 
 module.exports = nextConfig
