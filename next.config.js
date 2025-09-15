@@ -21,7 +21,9 @@ const nextConfig = {
     ]
   },
   // Allow cross-origin requests in development for Replit
-  allowedDevOrigins: '*',
+  experimental: {
+    allowedDevOrigins: ['*'],
+  },
 }
 
 module.exports = nextConfig

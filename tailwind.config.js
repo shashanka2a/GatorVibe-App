@@ -51,6 +51,13 @@ module.exports = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        // VYBR brand colors
+        vybr: {
+          purple: "#6366F1",
+          teal: "#10B981",
+          "teal-light": "#34D399",
+          "purple-light": "#818CF8",
+        },
       },
       borderRadius: {
         lg: "var(--radius)",
