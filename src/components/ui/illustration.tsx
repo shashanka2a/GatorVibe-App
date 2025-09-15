@@ -1,5 +1,5 @@
 interface IllustrationProps {
-  type: 'housing' | 'roommate' | 'events' | 'hero' | 'celebration';
+  type: 'housing' | 'roommate' | 'events' | 'hero' | 'celebration' | 'chat';
   className?: string;
 }
 
@@ -440,6 +440,116 @@ export function Illustration({ type, className = "" }: IllustrationProps) {
         <circle cx="340" cy="120" r="4" fill="#60A5FA" opacity="0.7"/>
         <circle cx="200" cy="40" r="2" fill="#34D399" opacity="0.7"/>
         <circle cx="200" cy="260" r="3" fill="#FBBF24" opacity="0.7"/>
+      </svg>
+    ),
+    
+    chat: (
+      <svg viewBox="0 0 400 300" className={className}>
+        <defs>
+          <linearGradient id="chatBg" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stopColor="#F0F9FF" />
+            <stop offset="100%" stopColor="#E0F2FE" />
+          </linearGradient>
+          <linearGradient id="aiGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stopColor="#10B981" />
+            <stop offset="100%" stopColor="#8B5CF6" />
+          </linearGradient>
+        </defs>
+        
+        {/* Background */}
+        <rect width="400" height="300" fill="url(#chatBg)" rx="16"/>
+        
+        {/* Chat interface frame */}
+        <rect x="60" y="40" width="280" height="220" fill="#FFFFFF" stroke="#E5E7EB" strokeWidth="2" rx="12"/>
+        
+        {/* Header bar */}
+        <rect x="60" y="40" width="280" height="40" fill="url(#aiGrad)" opacity="0.1" rx="12 12 0 0"/>
+        <circle cx="80" cy="60" r="4" fill="#10B981"/>
+        <rect x="95" y="55" width="60" height="10" fill="url(#aiGrad)" opacity="0.6" rx="5"/>
+        <text x="125" y="66" textAnchor="middle" fill="#374151" fontSize="10" fontWeight="600">AI Assistant</text>
+        
+        {/* User message 1 */}
+        <g transform="translate(240, 100)">
+          <rect x="0" y="0" width="80" height="30" fill="#8B5CF6" opacity="0.2" rx="15 15 5 15"/>
+          <text x="40" y="12" textAnchor="middle" fill="#6B46C1" fontSize="9">Hi! I need help</text>
+          <text x="40" y="22" textAnchor="middle" fill="#6B46C1" fontSize="9">finding housing</text>
+        </g>
+        
+        {/* AI response 1 */}
+        <g transform="translate(80, 140)">
+          <rect x="0" y="0" width="100" height="40" fill="#10B981" opacity="0.2" rx="15 15 15 5"/>
+          <text x="50" y="12" textAnchor="middle" fill="#059669" fontSize="9">I'd be happy to help!</text>
+          <text x="50" y="22" textAnchor="middle" fill="#059669" fontSize="9">What's your budget</text>
+          <text x="50" y="32" textAnchor="middle" fill="#059669" fontSize="9">and location preference?</text>
+        </g>
+        
+        {/* User message 2 */}
+        <g transform="translate(200, 190)">
+          <rect x="0" y="0" width="120" height="30" fill="#8B5CF6" opacity="0.2" rx="15 15 5 15"/>
+          <text x="60" y="12" textAnchor="middle" fill="#6B46C1" fontSize="9">Around $600/month</text>
+          <text x="60" y="22" textAnchor="middle" fill="#6B46C1" fontSize="9">near campus</text>
+        </g>
+        
+        {/* AI response 2 - typing indicator */}
+        <g transform="translate(80, 230)">
+          <rect x="0" y="0" width="60" height="20" fill="#10B981" opacity="0.2" rx="15 15 15 5"/>
+          <circle cx="15" cy="10" r="2" fill="#10B981" opacity="0.6">
+            <animate attributeName="opacity" values="0.6;1;0.6" dur="1s" repeatCount="indefinite" begin="0s"/>
+          </circle>
+          <circle cx="25" cy="10" r="2" fill="#10B981" opacity="0.6">
+            <animate attributeName="opacity" values="0.6;1;0.6" dur="1s" repeatCount="indefinite" begin="0.3s"/>
+          </circle>
+          <circle cx="35" cy="10" r="2" fill="#10B981" opacity="0.6">
+            <animate attributeName="opacity" values="0.6;1;0.6" dur="1s" repeatCount="indefinite" begin="0.6s"/>
+          </circle>
+        </g>
+        
+        {/* AI brain/robot icon */}
+        <g transform="translate(70, 90)">
+          <circle cx="0" cy="0" r="15" fill="url(#aiGrad)" opacity="0.3"/>
+          <rect x="-10" y="-8" width="20" height="16" fill="url(#aiGrad)" opacity="0.6" rx="8"/>
+          <circle cx="-4" cy="-2" r="2" fill="#FFFFFF"/>
+          <circle cx="4" cy="-2" r="2" fill="#FFFFFF"/>
+          <rect x="-6" y="4" width="12" height="2" fill="#FFFFFF" rx="1"/>
+          
+          {/* Antenna */}
+          <rect x="-1" y="-15" width="2" height="7" fill="url(#aiGrad)" opacity="0.6"/>
+          <circle cx="0" cy="-16" r="2" fill="#10B981"/>
+        </g>
+        
+        {/* Floating suggestion chips */}
+        <g transform="translate(150, 50)">
+          <rect x="0" y="0" width="40" height="16" fill="#FFFFFF" stroke="#10B981" strokeWidth="1" rx="8"/>
+          <text x="20" y="10" textAnchor="middle" fill="#10B981" fontSize="7">Housing</text>
+        </g>
+        
+        <g transform="translate(200, 50)">
+          <rect x="0" y="0" width="45" height="16" fill="#FFFFFF" stroke="#8B5CF6" strokeWidth="1" rx="8"/>
+          <text x="22" y="10" textAnchor="middle" fill="#8B5CF6" fontSize="7">Roommates</text>
+        </g>
+        
+        <g transform="translate(255, 50)">
+          <rect x="0" y="0" width="35" height="16" fill="#FFFFFF" stroke="#F59E0B" strokeWidth="1" rx="8"/>
+          <text x="17" y="10" textAnchor="middle" fill="#F59E0B" fontSize="7">Events</text>
+        </g>
+        
+        {/* Quick action buttons */}
+        <g transform="translate(270, 270)">
+          <circle cx="0" cy="0" r="12" fill="#10B981"/>
+          <path d="M-6 -2 L6 -2 L6 2 L-6 2 Z" fill="#FFFFFF"/>
+          <path d="M-6 -2 L0 4 L6 -2" stroke="#FFFFFF" strokeWidth="1.5" fill="none"/>
+        </g>
+        
+        {/* Sparkles indicating AI magic */}
+        <g fill="#10B981" opacity="0.4">
+          <path d="M350 80 L352 85 L357 87 L352 89 L350 94 L348 89 L343 87 L348 85 Z"/>
+          <path d="M50 180 L51 183 L54 184 L51 185 L50 188 L49 185 L46 184 L49 183 Z"/>
+          <path d="M370 200 L372 205 L377 207 L372 209 L370 214 L368 209 L363 207 L368 205 Z"/>
+        </g>
+        
+        {/* Message input area */}
+        <rect x="70" y="270" width="200" height="20" fill="#F9FAFB" stroke="#E5E7EB" strokeWidth="1" rx="10"/>
+        <text x="75" y="282" fill="#9CA3AF" fontSize="8">Type your message...</text>
       </svg>
     ),
     

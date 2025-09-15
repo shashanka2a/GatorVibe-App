@@ -1,4 +1,4 @@
-import { Users, Home, MessageCircle } from "lucide-react";
+import { Users, Home, MessageCircle, Star } from "lucide-react";
 import { Card, CardContent } from "./ui/card";
 import { Illustration } from "./ui/illustration";
 import { FadeIn, Stagger } from "./ui/animated-elements";
